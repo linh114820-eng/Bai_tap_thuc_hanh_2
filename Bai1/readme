@@ -1,1 +1,47 @@
+# Bai_thuc_hanh_2
+Bài thực hành số 2
+## 1. Bài toán: 
+- Vẽ sơ đồ khối và xác định kết quả thực hiện của hàm ktra(int N) với các giá trị: N = 28, N = 20, N = -9, N = 6
+  int ktra(int N){
+    if(N <= 0) return 0;
+    int S = 0;
+    for( int i = 1; i <= N/2; i++)
+        if(N % i == 0)
+          S += i;
+    if(S == N) return 1;
+    return 0;
+  }
+  ## 2. Ý nghĩa hàm:
+  Hàm kiểm tra xem N có phải là Số hoàn hảo hay không (số có tổng các ước thực sự của nó bằng chính nó).
+  - Trả về 1: N là số hoàn hảo.
+  - Trả về 0: N không phải là số hoàn hảo (hoặc N <= 0)
+   ## 3. Kết quả thực hiện hàm ktra(int N)
+  ### Với N = 28
+  - Kiểm tra N <= 0: Sai (28 > 0).
+  - Tìm các ước i từ 1 đến [28/2] = 14:
+        + Các ước của 28 trong khoảng [1, 14] là:1, 2, 4, 7, 14.
+        + Tổng các ước: S = 1 + 2 + 4 + 7 + 14 = 28.
+  - So sánh S == N (28 == 28): Đúng
+  - Trả về 1.
+  - Kết quả: 1 (28 là số hoàn hảo).
+    ### Với N = 20
+  - Kiểm tra N <= 0: Sai (20 > 0).
+  - Tìm các ước i từ 1 đến [20/2] = 10:
+        + Các ước của 20 trong khoảng [1, 10] là: 1, 2, 4, 5, 10.
+        + Tổng các ước: S = 1 + 2 + 4 + 5 + 10 = 22.
+  - So sánh S == N (22 == 20): Sai
+  - Trả về 0.
+  - Kết quả: 0 (20 không phải số hoàn hảo)
+    ### Với N = -9
+  - Kiểm tra N <= 0: Đúng (-9 < 0).
+  - Thực hiện câu lệnh return 0;
+  - Ngay lập tức kết quả: 0
+    ### Với N = 6
+  - Kiểm tra N <= 0: Sai (6 > 0).
+  - Tìm các ước i từ 1 đến [6/2] = 3:
+  - Các ước của 6 trong khoảng [1, 3] là: 1, 2, 3.
+        + Tổng các ước: S = 1 + 2 + 3 = 6.
+        + So sánh S == N (6 == 6): Đúng
+  - Trả về 1.
+  - Kết quả: 1 (6 là số hoàn hảo).
 
