@@ -1,1 +1,29 @@
 
+chuyển sơ đồ khối về mã nguồn
+# Bài 1: Kiểm tra số hoàn hảo
+
+## 1. Đề bài
+
+Viết chương trình kiểm tra một số nguyên dương N có phải là số hoàn hảo hay không.
+
+Số hoàn hảo là số có tổng các ước số nguyên dương nhỏ hơn chính nó bằng chính nó.
+
+Ví dụ: 6 là số hoàn hảo vì 1 + 2 + 3 = 6.
+
+## 2. Ý tưởng thuật toán
+
+- Bước 1: Nhập số nguyên N.
+- Bước 2: Nếu N <= 0 thì kết luận N không phải số hoàn hảo.
+- Bước 3: Khởi tạo tổng S = 0.
+- Bước 4: Duyệt i từ 1 đến N/2.
+- Bước 5: Nếu N chia hết cho i thì cộng i vào S.
+- Bước 6: Sau khi kết thúc vòng lặp, nếu S == N thì N là số hoàn hảo.
+- Bước 7: In kết quả và kết thúc chương trình.
+
+## 3. Input
+
+Một số nguyên N.
+
+## 4. Output
+
+Thông báo N là số hoàn hảo hoặc N không phải số hoàn hảo.
